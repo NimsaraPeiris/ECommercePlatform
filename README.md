@@ -74,3 +74,6 @@ The status can be updated dynamically.
 3. Order ↔ OrderItem: 1-to-many
 4. Order ↔ Payment: 1-to-1
 5. Order ↔ Shipping: 1-to-1
+
+### Contributors
+1. Chamal Randika Mallawaarachchi - 22ug1-0093
