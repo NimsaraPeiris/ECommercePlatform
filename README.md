@@ -77,4 +77,4 @@ The status can be updated dynamically.
 
 ### Contributors
 1. Chamal Randika Mallawaarachchi - 22ug1-0093
-2. P D P Nimsara Peiris           - 22ug1-0627
+2. P.D.P. Nimsara Peiris           - 22ug1-0627
