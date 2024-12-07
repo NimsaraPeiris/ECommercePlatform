@@ -1,0 +1,67 @@
+@startuml
+class User {
+  +String userId
+  +String username
+  +String password
+  +String role
+  +login(): void
+  +logout(): void
+}
+
+class Customer {
+  +String customerId
+  +String name
+  +String email
+  +String address
+  +String phone
+  +placeOrder(Order order): void
+}
+
+class Product {
+  +String productId
+  +String name
+  +String description
+  +float price
+  +int stockQuantity
+  +getDetails(): String
+  +updateStock(int quantity): void
+}
+
+class Order {
+  +String orderId
+  +String orderDate
+  +String status
+  +float totalAmount
+  +calculateTotal(): float
+  +updateStatus(String status): void
+}
+
+class OrderItem {
+  +String orderItemId
+  +int quantity
+  +float price
+  +getSubtotal(): float
+}
+
+class Payment {
+  +String paymentId
+  +String method
+  +float amount
+  +String status
+  +processPayment(): void
+}
+
+class Shipping {
+  +String shippingId
+  +String address
+  +String trackingId
+  +String status
+  +updateStatus(String status): void
+}
+
+User "1" -- "1" Customer
+Customer "1" -- "*" Order : places
+Order "1" -- "*" OrderItem : contains
+Order "1" -- "1" Payment : paidWith
+Order "1" -- "1" Shipping : shippedTo
+@enduml
